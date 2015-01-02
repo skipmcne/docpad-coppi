@@ -1,0 +1,42 @@
+---
+layout: narrow-page
+changefreq: daily
+priority: 0.8
+referencesOthers: true
+isPaged: true
+pagedCollection: posts
+pageSize: 5
+pagePathPrefix: page
+---
+
+<% for document in @getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
+    <%- @partial('post', {title: document.title, url: document.url, tags: document.tags, date: document.date, content: document.contentRenderedWithoutLayouts }) %>
+<% end %>
+
+<div class="page-nav">
+    <% if @hasNextPage(): %>
+    <a class="page-nav-older" href="<%= @getNextPage() %>"><span class="icon icon-arrow-left-2"></span> Older</a>
+    <% end %>
+    <% if @hasPrevPage(): %>
+    <a class="page-nav-newer" href="<%= @getPrevPage() %>">Newer <span class="icon icon-arrow-right-2"></span></a>
+    <% end %>
+    <div class="page-nav-archives"><a href="/archives/">- Blog Archives -</a></div>
+</div>
+
+<%- @partial('me') %>
+
+<div id='StravaSummary'>
+<iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='http://www.strava.com/clubs/1033/latest-rides/b3e42ed707c8ec6ad34172e96cfa24795e303f50?show_rides=false'></iframe>
+</div>
+
+<div id='StravaActivity'><iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='http://www.strava.com/clubs/1033/latest-rides/b3e42ed707c8ec6ad34172e96cfa24795e303f50?show_rides=true'></iframe>
+</div>
+
+<div id='tachinotwitter'><a class="twitter-timeline" href="https://twitter.com/TacchinoCX" data-widget-id="550845869214670848">Tweets by @TacchinoCX</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
+<div id='coppitwitter'>
+<a class="twitter-timeline" href="https://twitter.com/SquadraCoppi" data-widget-id="550845745847599104">Tweets by @SquadraCoppi</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
