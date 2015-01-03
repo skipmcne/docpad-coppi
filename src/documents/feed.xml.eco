@@ -15,8 +15,7 @@
         <title><%= document.title %></title>
         <link href="<%= @site.url %><%= document.url %>"/>
         <updated><%= document.date.toISOString() %></updated>
-        <id><%= @getIdForDocument(document) %></id>
-        <content type="html"><![CDATA[<%- @fixLinks(document.contentRenderedWithoutLayouts) %>]]></content>
+        <content type="html"></content>
     </entry>
     <% end %>
 </feed>

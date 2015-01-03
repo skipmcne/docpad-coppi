@@ -18,9 +18,9 @@
 	<%- @getBlock('meta').toHTML() %>
 
 	<!-- DocPad Styles + Our Own -->
-	<link rel="stylesheet" href="css/standardize.css">
-    <link rel="stylesheet" href="css/index-grid.css">
-    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="styles/standardize.css">
+    <link rel="stylesheet" href="styles/index-grid.css">
+    <link rel="stylesheet" href="styles/styles.css">
 	<%- @getBlock('styles').add(@site.styles).toHTML() %>
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -29,12 +29,11 @@
 	<!--[if lt IE 7]>
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
-
 	<header>
 		<h1><a href="<%= @site.url %>"><%- @site.title %></a></h1>
 		 <div class="nav"></div>
   <div class="bannertop clearfix">
-    <img class="image" src="images/logo.gif">
+    <img class="image" src="logo.gif">
   </div>
 	</header>
 	<article>
@@ -42,7 +41,6 @@
 	</article>
 	<footer>
 	</footer>
-
 	<!-- DocPad Scripts + Our Own -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
 </body>

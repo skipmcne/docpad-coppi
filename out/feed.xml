@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Squadra Coppi</title>
+    <link href="http://website.com/feed.xml" rel="self"/>
+    <link href="http://website.com"/>
+    <updated>2015-01-03T02:44:48.257Z</updated>
+    <id>http://website.com</id>
+    <author>
+        <name></name>
+        <email></email>
+    </author>
+
+    
+    <entry>
+        <title>Where now</title>
+        <link href="http://website.com/posts/where-now.html"/>
+        <updated>2015-01-03T02:39:44.000Z</updated>
+        <content type="html"></content>
+    </entry>
+    
+    <entry>
+        <title>Bonjour</title>
+        <link href="http://website.com/posts/welcome.html"/>
+        <updated>2015-01-03T02:25:48.000Z</updated>
+        <content type="html"></content>
+    </entry>
+    
+</feed>

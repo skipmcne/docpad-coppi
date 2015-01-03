@@ -15,23 +15,23 @@ docpadConfig = {
 			# If not set, will default to the calculated site URL (e.g. http://localhost:9778)
 			url: "http://website.com"
 
-			# Here are some old site urls that you would like to redirect from
+						# Here are some old site urls that you would like to redirect from
 			oldUrls: [
 				'www.website.com',
 				'website.herokuapp.com'
 			]
 
 			# The default title of our website
-			title: "Your Website"
+			title: "Squadra Coppi"
 
 			# The website description (for SEO)
 			description: """
-				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+				Squadra Coppi is an Arlington, VA based bicycle racing team. Famous for our esprit de corps, Coppi riders are well-known for supporting their own on and off the bike.
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+				Squadra Coppi, Arlington, VA, bicycle, bike, racing, team
 				"""
 
 			# The website's styles
@@ -79,6 +79,31 @@ docpadConfig = {
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
+		getPageUrlWithHostname: ->
+			"#{@site.url}#{@document.url}"
+
+		getIdForDocument: (document) ->
+			hostname = url.parse(@site.url).hostname
+			date = document.date.toISOString().split('T')[0]
+			path = document.url
+			"tag:#{hostname},#{date},#{path}"
+
+		fixLinks: (content) ->
+			baseUrl = @site.url
+			regex = /^(http|https|ftp|mailto):/
+
+#			$ = cheerio.load(content)
+			$('img').each ->
+				$img = $(@)
+				src = $img.attr('src')
+				$img.attr('src', baseUrl + src) unless regex.test(src)
+			$('a').each ->
+				$a = $(@)
+				href = $a.attr('href')
+				$a.attr('href', baseUrl + href) unless regex.test(href)
+			$.html()
+
+#		moment: require('moment')
 
 	# =================================
 	# Collections
@@ -91,22 +116,17 @@ docpadConfig = {
 	# http://bevry.me/queryengine/guide
 
 	collections:
-
 		# Create a collection called posts
 		# That contains all the documents that will be going to the out path posts
 		posts: ->
-			@getCollection('documents').findAllLive({relativeOutDirPath: 'posts'})
-
-		race: ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:'posts'},[date:-1])
+		races: ->
 			@getCollection('documents').findAllLive({relativeOutDirPath: 'races'})
-
 		rides: ->
 			@getCollection('documents').findAllLive({relativeOutDirPath: 'rides'})
 
 	# =================================
 	# Environments
-
-
 	# DocPad's default environment is the production environment
 	# The development environment, actually extends from the production environment
 	# the Development environment is ignored if the site is generated with 
@@ -123,14 +143,12 @@ docpadConfig = {
 			templateData:
 				site:
 					url: false
-	    	collections:
-            	posts: ->
-                	@getCollection('documents').findAllLive({relativeDirPath: {'$in' : ['posts', 'drafts']}}, [relativeDirPath: 1,  date: -1])					
-            	races: ->
-                	@getCollection('documents').findAllLive({relativeDirPath: {'$in' : ['races', 'drafts']}}, [relativeDirPath: 1,  date: -1])					
-            	rides: ->
-                	@getCollection('documents').findAllLive({relativeDirPath: {'$in' : ['posts', 'drafts']}}, [relativeDirPath: 1,  date: -1])					
 
+	environments:
+		development:
+	    	collections:
+           		posts: ->
+               		@getCollection('documents').findAllLive({relativeDirPath: {'$in' : ['posts', 'drafts']}}, [relativeDirPath: 1,  date: -1])					
 
 	# =================================
 	# DocPad Events
@@ -160,6 +178,7 @@ docpadConfig = {
 					res.redirect(newUrl+req.url, 301)
 				else
 					next()
+					
 }
 
 # Export our DocPad Configuration

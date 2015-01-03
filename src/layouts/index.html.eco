@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Properities -->
+	<title><%= @getPreparedTitle() %></title>
+	<meta name="description" content="<%= @getPreparedDescription() %>" />
+	<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+
+	<!-- DocPad Meta -->
+	<%- @getBlock('meta').toHTML() %>
+
+	<!-- DocPad Styles + Our Own -->
+	<link rel="stylesheet" href="styles/standardize.css">
+    <link rel="stylesheet" href="styles/index-grid.css">
+    <link rel="stylesheet" href="styles/styles.css">
+	<%- @getBlock('styles').add(@site.styles).toHTML() %>
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<header>
+		<h1><a href="<%= @site.url %>"><%- @site.title %></a></h1>
+		<div class="bannertop clearfix">
+			<img class="image" src="logo.gif">
+
+		</div>
+		 <div class="nav">
+		 	<a href='./rides'>Rides</a>
+		 	<a href='./races'>Races</a>
+		 	<a href='./news'>News</a>
+		 	<a href='./join'>join</a>
+		 	<a href='./members'>members</a>
+		 </div>
+		 
+	</header>
+    <div class="content clearfix">
+    	<div class="columna">
+		<%- @content %>
+		</div>
+		<div class="feeds">
+
+<h1> What We are up to </h1>
+
+<div id='StravaSummary' >
+<iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='http://www.strava.com/clubs/1033/latest-rides/b3e42ed707c8ec6ad34172e96cfa24795e303f50?show_rides=false'></iframe>
+</div>
+
+<div id='StravaActivity'><iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='http://www.strava.com/clubs/1033/latest-rides/b3e42ed707c8ec6ad34172e96cfa24795e303f50?show_rides=true'></iframe>
+</div>
+
+<!--div id='tachinotwitter'>
+	<a class="twitter-timeline" href="https://twitter.com/TacchinoCX" data-widget-id="550845869214670848">Tweets by @TacchinoCX</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div-->
+
+<div id='coppitwitter'>
+<a class="twitter-timeline" href="https://twitter.com/SquadraCoppi" data-widget-id="550845745847599104">Tweets by @SquadraCoppi</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+		</div>
+	</div>
+	<footer>
+	</footer>
+	<!-- DocPad Scripts + Our Own -->
+	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+</body>
+</html>

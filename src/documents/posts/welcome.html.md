@@ -1,9 +1,4 @@
 ---
-layout: 'Fall Races'
-title: 'Coppis ?'
----
-
----
 title: 'Bonjour'
 layout: 'post'
 tags: ['greeting','french']
