@@ -1,1 +1,2 @@
-Your website's license should go here
+
+Unless stated otherwise, all content is licensed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) and code licensed under the [MIT License](http://creativecommons.org/licenses/MIT/), © [Chareles McNeill](http://your.website)

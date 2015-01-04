@@ -1,7 +1,8 @@
 ---
 layout: 'races'
 title: 'Tacchino Ciclocross'
-Time: 'October 13, 2013 at 4:59 PM'
+description : 'The Tacchino is a cyclocross race in the Super 8 Series.'
+Time: 'October 13, 2015 at 9:00 AM'
 Address: 'Rosaryville State Park, 10 West Marlton Ave, Upper Marlboro, MD 20772'
 ---
 

@@ -9,7 +9,6 @@ pageSize: 5
 pagePathPrefix: page
 ---
 
-<h2><a href="<%= @document.url %>"><%- @document.title or @document.name %></a></h2>
 <div>
 
 <h1>Posts</h1>
@@ -32,7 +31,12 @@ pagePathPrefix: page
 <div id='races'>
 <% for document in @getCollection('races').toJSON(): %>
 	<div about="<%= document.url %>" id="<%= document.filename %>">
-		<a href='<%= document.url %>'><%= document.title %></a>
+		<ul>
+			<li><a href='<%= document.url %>'><%= document.title %></a></li>
+			<li><%= document.description %></li>
+			<li><%= document.Address %></li>
+			<li><%= document.Time %></li>
+		</ul>
 	</div>
 <% end %>
 </div>

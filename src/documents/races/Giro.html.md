@@ -1,7 +1,8 @@
 ---
 layout: 'races'
 title: 'Giro di Coppi'
-Time: 'July 13, 2013 at 9:00 AM'
+description: 'The Giro di Coppi returns with a challenging road race on a rolling course in Montgomery County, near Sugarloaf Mountain. Race held rain or shine. '
+Time: 'July 13, 2015 at 9:00 AM'
 Address: 'Barnesville, MD'
 Total Distance: '50'
 ---
