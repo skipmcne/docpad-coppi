@@ -1,0 +1,26 @@
+---
+layout: default
+changefreq: daily
+priority: 0.8
+referencesOthers: true
+isPaged: true
+pagedCollection: posts
+pageSize: 5
+pagePathPrefix: page
+---
+<div class="content">
+<h3>Posts</h3>
+<div id='posts'  >
+<% for document in @getCollection('posts').toJSON()[0..2]: %>
+	<article class="frame group">
+	    <header>
+	        <time datetime="<%= document.date %>"></time>
+	        <h4><a href='<%= document.url %>'><%= document.title %></a>
+	        </h4>
+	    </header>
+	    <img alt="<%= document.imagedesc %>" src="<%= document.image %>"></img>
+	    <p><%= document.description %></p>
+	    <a class="more" href="<%= document.url %>"> Read More >> </a>
+	</article>
+<% end %>
+</div>

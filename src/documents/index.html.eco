@@ -8,36 +8,46 @@ pagedCollection: posts
 pageSize: 5
 pagePathPrefix: page
 ---
-
-<div>
-
-<h1>Posts</h1>
-<div id='posts'>
-<% for document in @getCollection('posts').toJSON(): %>
-	<div about="<%= document.url %>" id="<%= document.filename %>">
-		<a href='<%= document.url %>'><%= document.title %></a>
-	</div>
+<div class="content">
+<h3>Posts</h3>
+<div id='posts'  >
+<% for document in @getCollection('posts').toJSON()[0..2]: %>
+	<article class="frame group">
+	    <header>
+	        <time datetime="<%= document.date %>"></time>
+	        <h4><a href='<%= document.url %>'><%= document.title %></a>
+	        </h4>
+	    </header>
+	    <img alt="<%= document.imagedesc %>" src="<%= document.image %>"></img>
+	    <p><%= document.description %></p>
+	    <a class="more" href="<%= document.url %>"> Read More >> </a>
+	</article>
 <% end %>
 </div>
-<h1> Rides </h1>
-<div id='rides'>
+<h3> Rides </h3>
+<div id='rides' >
 <% for document in @getCollection('rides').toJSON(): %>
-	<div about="<%= document.url %>" id="<%= document.filename %>">
-		<a href='<%= document.url %>'><%= document.title %></a>
-	</div>
+	<article class="frame group">
+	    <header>
+	    	 <h4><a href='<%= document.url %>'><%= document.title %></a>
+	        </h4>
+	    </header>
+	     <time datetime="<%= document.time %>"></time>
+	    <p><%= document.from %></p>
+	</article>
 <% end %>
 </div>
-<h1> Races </h1>
-<div id='races'>
+<h3> Races </h3>
+<div id='races' > 
 <% for document in @getCollection('races').toJSON(): %>
-	<div about="<%= document.url %>" id="<%= document.filename %>">
-		<ul>
-			<li><a href='<%= document.url %>'><%= document.title %></a></li>
-			<li><%= document.description %></li>
-			<li><%= document.Address %></li>
-			<li><%= document.Time %></li>
-		</ul>
-	</div>
+	<article class="frame group">
+	    <header>
+	    	 <h4><a href='<%= document.url %>'><%= document.title %></a>
+	        </h4>
+	    </header>
+	    <time datetime="<%= document.time %>"></time>
+	    <p><%= document.Address %></p>
+	</article>
 <% end %>
 </div>
 

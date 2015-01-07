@@ -1,0 +1,52 @@
+---
+layout: default
+---
+	<div id="content">
+			<h2>Member Profile</h2>
+			<section class="group">			
+			<header>
+				<h3><%= @document.name %></h3>
+				<img src="><%= @document.image %>" width="200" alt="<%= @document.imageAlt %>" />			
+			</header>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="row">Hometown:</th> 
+					<td><%= @document.Hometown %></td>
+				</tr>
+				<tr>
+					<th scope="row">Racing Since:</th> 
+					<td><%= @document.startedRacing %></td>
+				</tr>
+				<tr>
+					<th scope="row">Average Miles Per Year:</th> 
+					<td><%= @document.annMileage %></td>
+				</tr>
+				<tr>
+					<th scope="row">Cyclocross:</th> 
+					<td><%= @document.crossCat %></td>
+				</tr>
+				<tr>
+					<th scope="row">Mountain:</th> 
+					<td><%= @document.mountainCat %></td>
+				</tr>
+				<tr>
+					<th scope="row">Road:</th>
+					<td><%= @document.roadCat %></td>
+				</tr>
+				<tr>
+					<th scope="row">Track:</th> 
+					<td><%= @document.trackCat %></td>
+				</tr>
+				<tr>
+					<th scope="row">Bikes Owned:</th> 
+					<td><%= @document.bikes %></td>
+				</tr>
+				<tr>
+					<th scope="row">Bio:</th>
+					<td><%= @document.bio %></td>
+				</tr>
+				</tbody>
+			</table>
+		</section>			
+</div>

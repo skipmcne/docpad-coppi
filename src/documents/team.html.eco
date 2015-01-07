@@ -1,0 +1,49 @@
+---
+layout: default
+changefreq: daily
+priority: 0.8
+referencesOthers: true
+isPaged: true
+pagedCollection: posts
+pageSize: 5
+pagePathPrefix: page
+---
+<div class="content">
+<table>	
+	<colgroup>
+    <col></col>
+    <col span="4"></col>
+	</colgroup>
+<thead>
+    <tr>
+        <th rowspan="2" scope="col">
+            <span class="remove"></span>
+        </th>
+        <th class="meta" colspan="4" scope="col">
+            Cycling Class Categories
+        </th>
+    </tr>
+    <tr>
+        <th scope="col">Cyclocross </th>
+        <th scope="col">Mountain </th>
+        <th scope="col">Road </th>
+        <th scope="col">Track</th>
+    </tr>
+</thead>
+<tbody>
+	<% for person in @getCollection('team').toJSON(): %>
+	<tr class="odd">
+    <th scope="row">
+        <a href="<%= person.url %>">
+            <%= person.name %>
+        </a>
+    </th>
+    <td><%= person.crossCat %></td>
+    <td><%= person.mountainCat %></td>
+    <td><%= person.roadCat %></td>
+    <td><%= person.trackCat %></td>
+	</tr>
+<% end %>
+</tbody>
+</table>
+</div>

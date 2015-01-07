@@ -38,7 +38,6 @@ docpadConfig = {
 			styles: [
 				'/vendor/normalize.css'
 				'/vendor/h5bp.css'
-				'/styles/styles.css'
 			]
 
 			# The website's scripts
@@ -124,6 +123,9 @@ docpadConfig = {
 			@getCollection('documents').findAllLive({relativeOutDirPath: 'races'})
 		rides: ->
 			@getCollection('documents').findAllLive({relativeOutDirPath: 'rides'})
+		team: ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:'team'})
+
 
 	# =================================
 	# Environments

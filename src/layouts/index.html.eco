@@ -18,9 +18,10 @@
 	<%- @getBlock('meta').toHTML() %>
 
 	<!-- DocPad Styles + Our Own -->
-	<link rel="stylesheet" href="styles/standardize.css">
-    <link rel="stylesheet" href="styles/index-grid.css">
-    <link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="/styles/standardize.css">
+    <link rel="stylesheet" href="/styles/index-grid.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/standard.css">
 	<%- @getBlock('styles').add(@site.styles).toHTML() %>
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -30,27 +31,32 @@
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 	<header>
-		<h1><a href="<%= @site.url %>"><%- @site.title %></a></h1>
 		<div class="bannertop clearfix">
-			<img class="image" src="logo.gif">
-
+			<img class="logo" src="logo.gif">
 		</div>
-		 <div class="nav">
-		 	<a href='./rides'>Rides</a>
-		 	<a href='./races'>Races</a>
-		 	<a href='./news'>News</a>
-		 	<a href='./join'>join</a>
-		 	<a href='./members'>members</a>
-		 </div>
+ 		<nav id="site" class="group">
+		 	<ul>
+		 		<li><a href='./rides' >Rides</a> </li>
+		 		<li><a href='./races'>Races</a> </li>
+		 		<li><a href='./news'>News</a> </li>
+		 		<li><a href='./join'>Join</a> </li>
+		 		<li><a href='./team.html'>Members</a></li>
+		 	</ul>
+		 </nav>
 		 
 	</header>
     <div class="content clearfix">
     	<div class="columna">
-		<%- @content %>
+			<%- @content %>
+			<h2 class="sponsors">Our Sponsors</h2>
+			<div class="sponsors">
+		    	<ul></ul>
+	    		<p class="lead-in"></p>
+			</div>
 		</div>
 		<div class="feeds">
 
-<h1> What We are up to </h1>
+<h2>Current Events</h2>
 
 <div id='StravaSummary' >
 <iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='http://www.strava.com/clubs/1033/latest-rides/b3e42ed707c8ec6ad34172e96cfa24795e303f50?show_rides=false'></iframe>
@@ -70,8 +76,56 @@
 </div>
 		</div>
 	</div>
-	<footer>
-	</footer>
+<div id="site_info" class="group">
+	<nav class="logo">
+		<p><a href="/"><img src="/images/css/logo-rev.png" width="204" height="70" title="Take me home" alt="Squadra Coppi" /></a></p>	
+	</nav>
+	<div>
+		<h2>About Squadra Coppi</h2>
+		
+			<p>
+	<strong>Squadra Coppi/Vapiano USA</strong>&nbsp;is an Arlington, VA based bicycle racing team. Famous for our <strong><span style="font-style: italic">esprit de corps</span></strong>, Coppi riders are well-known for supporting their own on and off the bike. Join us on one of our team rides and see if Squadra Coppi is a fit for you--it&#39;s how every team member got their start with us.</p>
+
+		
+		
+		<p>
+			<a href="http://squadracoppi.com/about" class="more">Read more &#187;</a>
+		</p>
+		
+	</div>
+	<nav class="sponsor">
+		<h2>Sponsor Us</h2>
+		<p><a href="http://squadracoppi.com/sponsorship" class="button">Learn how</a></p>
+	</nav>
+	<nav class="follow">
+		<h2>Follow Us</h2>
+		<ul>
+			<li>
+				<a href="https://www.facebook.com/pages/Squadra-Coppi/101003753308174"><img src="/images/css/icn-facebook.png" width="32" height="32" title="Facebook" alt="Facebook" /></a>
+			</li>
+			<li>
+				<a href="http://twitter.com/#!/squadracoppi/"><img src="/images/css/icn-twitter.png" width="32" height="32" title="Twitter" alt="Twitter" /></a>
+			</li>
+		</ul>
+	</nav>
+</div><!-- /#site_info -->
+</aside>
+	<footer class="group">
+	<p id="rights">
+		<small>Copyright &#169; 2015 Squadra Coppi</small>
+	</p>
+	<nav class="group" id="supp">
+	<ul>
+	<li class="current"><a href="http://squadracoppi.com/">Home</a></li>
+	<li ><a href="http://squadracoppi.com/team">Team</a></li>
+	<li ><a href="http://squadracoppi.com/news">News</a></li>	
+	<li ><a href="http://squadracoppi.com/events">Races &amp; Rides</a></li>
+	<li ><a href="http://squadracoppi.com/sponsors">Sponsors</a></li>
+	<li ><a href="http://squadracoppi.com/about">About</a></li>
+	<li ><a href="http://squadracoppi.com/contact">Contact</a></li>
+	</ul>
+</nav>
+</footer>
 	<!-- DocPad Scripts + Our Own -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
 </body>

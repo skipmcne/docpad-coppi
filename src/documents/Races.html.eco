@@ -1,0 +1,26 @@
+---
+layout: default
+changefreq: daily
+priority: 0.8
+referencesOthers: true
+isPaged: true
+pagedCollection: posts
+pageSize: 5
+pagePathPrefix: page
+---
+<div class="content">
+<h3> races </h3>
+<div id='races' >
+<% for document in @getCollection('races').toJSON(): %>
+	<article class="frame group">
+	    <header>
+	    	 <h4><a href='<%= document.url %>'><%= document.title %></a>
+	        </h4>
+	    </header>
+	     <time datetime="<%= document.time %>"></time>
+	    <p><%= document.from %></p>
+	</article>
+<% end %>
+</div>
+
+</div>

@@ -463,11 +463,7 @@ q:before, q:after {
 blockquote, q {
   quotes: "" "";
 }
-a,
-a:hover,
-a:visited {
-  text-decoration: none;
-}
+
 button,
 input,
 fieldset,
