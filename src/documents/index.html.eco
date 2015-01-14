@@ -9,9 +9,9 @@ pageSize: 5
 pagePathPrefix: page
 ---
 <div class="content">
-<h3>Posts</h3>
-<div id='posts'  >
-<% for document in @getCollection('posts').toJSON()[0..2]: %>
+<h3>News</h3>
+<div id='news'  >
+<% for document in @getCollection('news').toJSON()[0..2]: %>
 	<article class="frame group">
 	    <header>
 	        <time datetime="<%= document.date %>"></time>
@@ -26,7 +26,7 @@ pagePathPrefix: page
 </div>
 <h3> Rides </h3>
 <div id='rides' >
-<% for document in @getCollection('rides').toJSON(): %>
+<% for document in @getCollection('rides').toJSON()[0..2]: %>
 	<article class="frame group">
 	    <header>
 	    	 <h4><a href='<%= document.url %>'><%= document.title %></a>
@@ -39,7 +39,7 @@ pagePathPrefix: page
 </div>
 <h3> Races </h3>
 <div id='races' > 
-<% for document in @getCollection('races').toJSON(): %>
+<% for document in @getCollection('races').toJSON()[0..2]: %>
 	<article class="frame group">
 	    <header>
 	    	 <h4><a href='<%= document.url %>'><%= document.title %></a>

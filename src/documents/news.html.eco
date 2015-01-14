@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: narrow-page
 changefreq: daily
 priority: 0.8
 referencesOthers: true
@@ -9,9 +9,9 @@ pageSize: 5
 pagePathPrefix: page
 ---
 <div class="content">
-<h3>Posts</h3>
-<div id='posts'  >
-<% for document in @getCollection('posts').toJSON()[0..2]: %>
+<h3>News</h3>
+<div id='News'  >
+<% for document in @getCollection('news').toJSON()[0..2]: %>
 	<article class="frame group">
 	    <header>
 	        <time datetime="<%= document.date %>"></time>

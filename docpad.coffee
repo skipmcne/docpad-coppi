@@ -117,12 +117,12 @@ docpadConfig = {
 	collections:
 		# Create a collection called posts
 		# That contains all the documents that will be going to the out path posts
-		posts: ->
-			@getCollection('documents').findAllLive({relativeOutDirPath:'posts'},[date:-1])
+		news: ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:'news'},[date:-1])
 		races: ->
-			@getCollection('documents').findAllLive({relativeOutDirPath: 'races'})
+			@getCollection('documents').findAllLive({relativeOutDirPath:'races'})
 		rides: ->
-			@getCollection('documents').findAllLive({relativeOutDirPath: 'rides'})
+			@getCollection('documents').findAllLive({relativeOutDirPath:'rides'})
 		team: ->
 			@getCollection('documents').findAllLive({relativeOutDirPath:'team'})
 
@@ -180,6 +180,22 @@ docpadConfig = {
 					res.redirect(newUrl+req.url, 301)
 				else
 					next()
+
+	# =================================
+	# DocPad plugins
+
+	# Here we can define handlers for events that DocPad fires
+	# You can find a full listing of events on the DocPad Wiki
+
+	plugins:
+	    associatedfiles:
+	        # The paths for the associated files.
+	        associatedFilesPath: 'associated-files'
+
+	        # Whether to use relative base paths for the document. This would
+	        # use associated-files/subfolder/myarticle/image.jpg instead of
+	        # associated-files/myarticle/image.jpg.
+	        useRelativeBase: false
 					
 }
 

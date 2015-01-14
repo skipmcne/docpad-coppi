@@ -32,25 +32,34 @@ body {
   margin-top: 10px;
 }
 .bannertop {
-  position: relative;
   top: 0;
   left: 15%;
-  z-index: 1;
-  width: 67%;
+  margin-right: 15%;
+  margin-left: 15%;
   height: 167px;
   border-bottom: 2px solid rgb(0, 0, 0);
 }
-.content, footer, header { 
-  position: relative; 
-  margin: .5em; 
+.columnb {
+  position: relative;
+  width: 80%;
+  margin-top: 40px;
+  margin-left: 10%;
+  margin-right: 10%;
+} 
+.columna {
+  float: left;
+  width: 50%;
+  margin-top: 40px;
+  margin-left: 10%;
+  border: 5px;    
 }
-.columna, footer, header {
-  padding: 1.25em; 
+.feeds {
+  float: right;
+  width: 310px;
+  border:5px;
+  margin-top: 40px;
+  margin-right: 10%;    
 }
-.columna { 
-  margin-bottom: .5em; 
-}
-
 nav#site {
   top: 180px;
   z-index: 2;
@@ -58,7 +67,7 @@ nav#site {
   margin-right: 15%;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES 
 @media screen and (min-width: 47.5em ) {
   .columna {
    margin-right: 19.5em;
@@ -73,10 +82,11 @@ nav#site {
     width: 310px; 
    }   
 }
+*/
 /* MEDIA QUERIES */
 
 
-@media(max-width: 1011px) {
+@media(max-width: 1010px) {
   .bannertop {
     left: 10%;
     width: 80%;
@@ -90,32 +100,20 @@ nav#site {
   }
  .columna {
     position: relative;
-    z-index: 3;
     width: 80%;
     margin-top: 40px;
     margin-left: 10%;
     margin-right: 10%;
   }
- .columnb {
-    position: relative;
-    z-index: 3;
-    width: 80%;
-    margin-top: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
  .feeds { 
     float: left;
     clear: both;
-    width: 80%;
+    width: 20%;
     margin-top: 40px;
     margin-left: 10%;
     margin-right: 10%;
   }
 }
-
-@media(max-width: 1010px) {
   body {
     font-size: 1em;
   }
@@ -128,17 +126,14 @@ nav#site {
   }
  .columna {
     position: relative;
-    z-index: 3;
     width: 80%;
-    margin-left: 10%;
+    margin: 10%;
   }
   .feeds {
     float: left;
     width: 80%;
-    margin-top: 40px;
-    margin-left:10%;
+    margin:10%;
   }
-
   ._element {
     position: relative;
     z-index: 7;
@@ -175,18 +170,11 @@ nav#site {
     left: 0;
     right: auto;
   }
-
   .bannertop .image {
     height: auto;
     margin-top: 20px;
   }
-
-   .columna {
-    width: 100%;
-    margin-top: 5px;
-    margin-left: 5px;
-  }
-   .columnb {
+ .columna  .columnb {
     width: 100%;
     margin-top: 5px;
     margin-left: 5px;
@@ -198,6 +186,4 @@ nav#site {
     margin-top: 5px;
     margin-left: 5px;
   }
-
-
 }
