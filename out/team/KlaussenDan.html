@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Properities -->
+	<title>Squadra Coppi</title>
+	<meta name="description" content="Squadra Coppi is an Arlington, VA based bicycle racing team. Famous for our esprit de corps, Coppi riders are well-known for supporting their own on and off the bike." />
+	<meta name="keywords" content="Squadra Coppi, Arlington, VA, bicycle, bike, racing, team" />
+
+	<!-- DocPad Meta -->
+	<meta name="generator" content="DocPad v6.78.1" />
+
+	<!-- DocPad Styles + Our Own -->
+	<link rel="stylesheet" href="/styles/standardize.css">
+    <link rel="stylesheet" href="/styles/index-grid.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+	<style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/h5bp.css" />
+
+<!--link rel="icon" type="image/vnd.microsoft.icon" href="http://example.com/image.ico" -->
+<!--link rel="apple-touch-icon" href="touch-icon-iphone.png" -->
+<!--link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png"-->
+<!--link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png"-->
+<!--link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png"-->
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<header>
+		<div class="bannertop clearfix">
+			<img class="logo" src="/logo.gif">
+		</div>
+ 		<nav id="site" class="group">
+		 	<ul>
+		 		<li><a href='/Rides.html'>Rides</a> </li>
+		 		<li><a href='/Races.html'>Races</a> </li>
+		 		<li><a href='/News.html'>News</a> </li>
+		 		<li><a href='/Join.html'>Join</a> </li>
+		 		<li><a href='/Team.html'>Members</a></li>
+		 	</ul>
+		 </nav>
+	</header>
+	<article class="columnb">
+	<div class="container">
+           <div id="content">
+			<h2>Member Profile</h2>
+			<section class="group">			
+			<header>
+				<h3>Dan Klaussen</h3>
+				<img src=">" width="200" alt="" />			
+			</header>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="row">Hometown:</th> 
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Racing Since:</th> 
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Average Miles Per Year:</th> 
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Cyclocross:</th> 
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Mountain:</th> 
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Road:</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Track:</th> 
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Bikes Owned:</th> 
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Bio:</th>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</section>			
+</div>
+	</div>
+</article>
+	<footer>
+	</footer>
+	<!-- DocPad Scripts + Our Own -->
+	<script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/primus/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\/script>')</script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+</body>
+</html>

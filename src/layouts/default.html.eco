@@ -21,7 +21,6 @@
 	<link rel="stylesheet" href="/styles/standardize.css">
     <link rel="stylesheet" href="/styles/index-grid.css">
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/standard.css">
 	<%- @getBlock('styles').add(@site.styles).toHTML() %>
 
 <!--link rel="icon" type="image/vnd.microsoft.icon" href="http://example.com/image.ico" -->
@@ -40,11 +39,11 @@
 		</div>
  		<nav id="site" class="group">
 		 	<ul>
-		 		<li><a href='./Rides.html'>Rides</a> </li>
-		 		<li><a href='./Races.html'>Races</a> </li>
-		 		<li><a href='./News.html'>News</a> </li>
-		 		<li><a href='./Join.html'>Join</a> </li>
-		 		<li><a href='./Team.html'>Members</a></li>
+		 		<li><a href='/Rides.html'>Rides</a> </li>
+		 		<li><a href='/Races.html'>Races</a> </li>
+		 		<li><a href='/News.html'>News</a> </li>
+		 		<li><a href='/Join.html'>Join</a> </li>
+		 		<li><a href='/Team.html'>Members</a></li>
 		 	</ul>
 		 </nav>
 	</header>

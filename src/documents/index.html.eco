@@ -15,7 +15,7 @@ pagePathPrefix: page
 	<article class="frame group">
 	    <header>
 	        <time datetime="<%= document.date %>"></time>
-	        <h4><a href='<%= document.url %>'><%= document.title %></a>
+	        <h4><a class="posttitle" href='<%= document.url %>'><%= document.title %></a>
 	        </h4>
 	    </header>
 	    <img alt="<%= document.imagedesc %>" src="<%= document.image %>"></img>
@@ -29,7 +29,7 @@ pagePathPrefix: page
 <% for document in @getCollection('rides').toJSON()[0..2]: %>
 	<article class="frame group">
 	    <header>
-	    	 <h4><a href='<%= document.url %>'><%= document.title %></a>
+	    	 <h4><a class="posttitle" href='<%= document.url %>'><%= document.title %></a>
 	        </h4>
 	    </header>
 	     <time datetime="<%= document.time %>"></time>
@@ -42,7 +42,7 @@ pagePathPrefix: page
 <% for document in @getCollection('races').toJSON()[0..2]: %>
 	<article class="frame group">
 	    <header>
-	    	 <h4><a href='<%= document.url %>'><%= document.title %></a>
+	    	 <h4><a class="posttitle" href='<%= document.url %>'><%= document.title %></a>
 	        </h4>
 	    </header>
 	    <time datetime="<%= document.time %>"></time>

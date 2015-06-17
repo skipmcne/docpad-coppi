@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<h2><a href="<%= @document.url %>"><%- @document.title or @document.name %></a></h2>
-<div>
-	<%- @content %>
-</div>
+<h2><%- @document.title or @document.name %></h2>
+<article class="columnb">
+	<div class="container">
+           <%- @content %>
+	</div>
+</article>	

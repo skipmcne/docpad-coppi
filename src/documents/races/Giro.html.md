@@ -7,7 +7,7 @@ Address: 'Barnesville, MD'
 Total Distance: '50'
 ---
 
-The 2013 Giro di Coppi returns for another year of quality racing on July 13, 2013.
+The 2013 Giro di Coppi returns for another year of quality racing on July 13, 2013.  
 View Course Map
 http://ridewithgps.com/routes/124215
 Register Now

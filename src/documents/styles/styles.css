@@ -23,6 +23,15 @@ body {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+h4.a.posttitle {
+  text-decoration: none;
+  border-left: 1em;
+  font-size: 2em;
+}
+h4.a.posttitle:hover: {
+    text-decoration: underline;
+}
+
 body { 
   margin: 0; 
 }

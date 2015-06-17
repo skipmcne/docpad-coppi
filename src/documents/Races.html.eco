@@ -14,8 +14,7 @@ pagePathPrefix: page
 <% for document in @getCollection('races').toJSON(): %>
 	<article class="frame group">
 	    <header>
-	    	 <h4><a href='<%= document.url %>'><%= document.title %></a>
-	        </h4>
+	    	 <h4><a href='<%= document.url %>'><%= document.title %></a></h4>
 	    </header>
 	     <time datetime="<%= document.time %>"></time>
 	    <p><%= document.from %></p>

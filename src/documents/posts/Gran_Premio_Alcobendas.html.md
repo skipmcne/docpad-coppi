@@ -1,5 +1,5 @@
 ---
-layout: 'crp'
+layout: 'post'
 date: 'June 1, 2015'
 title: 'Gran Premio Alcobendas'
 description: 'Scott Ferry relates another story of racing in spain.'

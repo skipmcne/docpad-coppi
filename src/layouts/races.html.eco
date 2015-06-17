@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
+<article class="columnb">
+	<h2><%- @document.title or @document.name %></h2>
 
-<h2><a href="<%= @document.url %>"><%- @document.title or @document.name %></a></h2>
-<div>
+	<div class="container">
 	<%- @content %>
-</div>
+	</div>
+</article>

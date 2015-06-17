@@ -32,13 +32,13 @@ h3 {
     border-radius: 6px 6px 0px 0px;
 }
 h4{
-    font-size: 1.6em;
+    font-size: 2em;
     line-height: 1.125em;
     margin-top: 1.125em;
     margin-bottom: 0px;
 }
 
- h2.sponsors {
+h2.sponsors {
  	border-radius: 6px 6px 0px 0px;
     background-color: #F18C3A;
 }
@@ -63,7 +63,7 @@ article, aside, figure, footer, header, hgroup, menu, nav, section {
 }
 
 p, ul, th, td, time {
-    font-size: 1.2em;
+    font-size: 1.8em;
     line-height: 1.5em;
     margin-top: 1.5em;
     margin-bottom: 0px;
