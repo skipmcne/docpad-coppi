@@ -18,9 +18,9 @@
 	<%- @getBlock('meta').toHTML() %>
 
 	<!-- DocPad Styles + Our Own -->
-	<link rel="stylesheet" href="/styles/standardize.css">
     <link rel="stylesheet" href="/styles/index-grid.css">
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/standard.css">
 	<%- @getBlock('styles').add(@site.styles).toHTML() %>
 
 <!--link rel="icon" type="image/vnd.microsoft.icon" href="http://example.com/image.ico" -->

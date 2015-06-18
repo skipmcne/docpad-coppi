@@ -32,8 +32,8 @@ h3 {
     border-radius: 6px 6px 0px 0px;
 }
 h4{
-    font-size: 2em;
-    line-height: 1.125em;
+    font-size: 2.2em;
+    line-height: 2.125em;
     margin-top: 1.125em;
     margin-bottom: 0px;
 }
@@ -55,6 +55,7 @@ h2.sponsors {
     color: #999;
 }
 article {
+    font-size: 1.3em;
     padding: 1em 1em 2.4em 1em;
     border-bottom: 1px dotted #666;
 }
@@ -81,10 +82,12 @@ header h3 a:link, header h4 a:visited {
 }
 a:link, a:visited {
     color: #18B6E7;
+    text-decoration:none;
 }
 article.frame p {
 }
 article.frame img{
     float: left;
     width: 220px;
+    padding: 0.35em 0.9em 0.35em 0px;
 }
