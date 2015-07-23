@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      https://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
 <head>
 	<!-- Standard Meta -->
 	<meta charset="utf-8" />
@@ -14,25 +27,49 @@
 	<meta name="description" content="Squadra Coppi is an Arlington, VA based bicycle racing team. Famous for our esprit de corps, Coppi riders are well-known for supporting their own on and off the bike." />
 	<meta name="keywords" content="Squadra Coppi, Arlington, VA, bicycle, bike, racing, team" />
 
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+     <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
 	<!-- DocPad Meta -->
 	<meta name="generator" content="DocPad v6.78.1" />
 
 	<!-- DocPad Styles + Our Own -->
-    <link rel="stylesheet" href="/styles/index-grid.css">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/standard.css">
 	<style >html.wait {
 	cursor: wait !important;
 	opacity: 0;
 	transition: opacity 0.5s ease;
 }</style><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/h5bp.css" />
 
-<!--link rel="icon" type="image/vnd.microsoft.icon" href="http://example.com/image.ico" -->
-<!--link rel="apple-touch-icon" href="touch-icon-iphone.png" -->
-<!--link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png"-->
-<!--link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png"-->
-<!--link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png"-->
-</head>
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
 <body>
 	<!--[if lt IE 7]>
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -79,32 +116,8 @@
 	
 	<tr class="odd">
     <th scope="row">
-        <a href="/team/BelloraJames.html">
-            James Bellora
-        </a>
-    </th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-	</tr>
-
-	<tr class="odd">
-    <th scope="row">
         <a href="/team/AlvarezCody.html">
             Cody Alvarez
-        </a>
-    </th>
-    <td>3</td>
-    <td></td>
-    <td>4</td>
-    <td></td>
-	</tr>
-
-	<tr class="odd">
-    <th scope="row">
-        <a href="/team/BlomquistEric.html">
-            Eric Blomquist
         </a>
     </th>
     <td>3</td>
@@ -122,6 +135,30 @@
     <td></td>
     <td></td>
     <td>3</td>
+    <td></td>
+	</tr>
+
+	<tr class="odd">
+    <th scope="row">
+        <a href="/team/BelloraJames.html">
+            James Bellora
+        </a>
+    </th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+	</tr>
+
+	<tr class="odd">
+    <th scope="row">
+        <a href="/team/BlomquistEric.html">
+            Eric Blomquist
+        </a>
+    </th>
+    <td>3</td>
+    <td></td>
+    <td>4</td>
     <td></td>
 	</tr>
 
@@ -175,18 +212,6 @@
 
 	<tr class="odd">
     <th scope="row">
-        <a href="/team/EvansBrad.html">
-            Brad Evans
-        </a>
-    </th>
-    <td>2</td>
-    <td></td>
-    <td>3</td>
-    <td></td>
-	</tr>
-
-	<tr class="odd">
-    <th scope="row">
         <a href="/team/HassigOwne.html">
             Owen Hassig
         </a>
@@ -211,18 +236,6 @@
 
 	<tr class="odd">
     <th scope="row">
-        <a href="/team/HibbsJames.html">
-            James Hibbs
-        </a>
-    </th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-	</tr>
-
-	<tr class="odd">
-    <th scope="row">
         <a href="/team/MarrowChris.html">
             Chris Marrow
         </a>
@@ -235,13 +248,25 @@
 
 	<tr class="odd">
     <th scope="row">
-        <a href="/team/McNeillCharles.html">
-            Charles McNeill
+        <a href="/team/EvansBrad.html">
+            Brad Evans
         </a>
     </th>
-    <td>4</td>
+    <td>2</td>
     <td></td>
-    <td>4</td>
+    <td>3</td>
+    <td></td>
+	</tr>
+
+	<tr class="odd">
+    <th scope="row">
+        <a href="/team/HibbsJames.html">
+            James Hibbs
+        </a>
+    </th>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
 	</tr>
 
@@ -249,30 +274,6 @@
     <th scope="row">
         <a href="/team/Salas-OronoJoaquin.html">
             Joaquin Salas-Orono
-        </a>
-    </th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-	</tr>
-
-	<tr class="odd">
-    <th scope="row">
-        <a href="/team/SkubisMark.html">
-            Mark Skubis
-        </a>
-    </th>
-    <td>3</td>
-    <td></td>
-    <td>3</td>
-    <td></td>
-	</tr>
-
-	<tr class="odd">
-    <th scope="row">
-        <a href="/team/ThompsonScott.html">
-            Scott Thompson
         </a>
     </th>
     <td></td>
@@ -295,13 +296,37 @@
 
 	<tr class="odd">
     <th scope="row">
-        <a href="/team/TombrasKosta.html">
-            Kosta Tombras
+        <a href="/team/SkubisMark.html">
+            Mark Skubis
         </a>
     </th>
     <td>3</td>
+    <td></td>
     <td>3</td>
-    <td>3</td>
+    <td></td>
+	</tr>
+
+	<tr class="odd">
+    <th scope="row">
+        <a href="/team/McNeillCharles.html">
+            Charles McNeill
+        </a>
+    </th>
+    <td>4</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+	</tr>
+
+	<tr class="odd">
+    <th scope="row">
+        <a href="/team/ThompsonScott.html">
+            Scott Thompson
+        </a>
+    </th>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
 	</tr>
 
@@ -314,6 +339,18 @@
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
+	</tr>
+
+	<tr class="odd">
+    <th scope="row">
+        <a href="/team/TombrasKosta.html">
+            Kosta Tombras
+        </a>
+    </th>
+    <td>3</td>
+    <td>3</td>
+    <td>3</td>
     <td></td>
 	</tr>
 
