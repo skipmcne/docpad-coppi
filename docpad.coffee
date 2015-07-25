@@ -121,8 +121,6 @@ docpadConfig = {
 	collections:
 		# Create a collection called posts
 		# That contains all the documents that will be going to the out path posts
-		posts: ->
-			@getCollection('documents').findAllLive({relativeOutDirPath:'posts'},[date:-1])
 		news: ->
 			@getCollection('documents').findAllLive({relativeOutDirPath:'news'},[date:-1])
 		races: ->

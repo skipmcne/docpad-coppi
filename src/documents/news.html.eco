@@ -1,5 +1,5 @@
 ---
-layout: narrow-page
+layout: default
 changefreq: daily
 priority: 0.8
 referencesOthers: true
@@ -11,16 +11,24 @@ pagePathPrefix: page
 <div class="content">
 <h3>News</h3>
 <div id='News'  >
-<% for document in @getCollection('news').toJSON()[0..2]: %>
-	<article class="frame group">
-	    <header>
+<% for document in @getCollection('news').toJSON(): %>
+		<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+              <img alt="<%= document.imagedesc %>" src="<%= document.image %>"></img>
+              <i class="material-icons">play_circle_filled</i>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+               
 	        <time datetime="<%= document.date %>"></time>
 	        <h4><a href='<%= document.url %>'><%= document.title %></a>
 	        </h4>
-	    </header>
-	    <img alt="<%= document.imagedesc %>" src="<%= document.image %>"></img>
-	    <p><%= document.description %></p>
-	    <a class="more" href="<%= document.url %>"> Read More >> </a>
-	</article>
+                <%= document.description %>
+              </div>
+              <div class="mdl-card__actions">
+	    		<a class="more" href="<%= document.url %>"> Read More >> </a>
+              </div>
+            </div>
+      </section>
 <% end %>
 </div>

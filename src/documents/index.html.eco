@@ -1,54 +1,225 @@
----
-layout: index
-changefreq: daily
-priority: 0.8
-referencesOthers: true
-isPaged: true
-pagedCollection: posts
-pageSize: 5
-pagePathPrefix: page
----
-<div class="content">
-<h3>News</h3>
-<div id='news'  >
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      https://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Properities -->
+	<title><%= @getPreparedTitle() %></title>
+	<meta name="description" content="<%= @getPreparedDescription() %>" />
+	<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+     <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+	<!-- DocPad Meta -->
+	<%- @getBlock('meta').toHTML() %>
+
+	<!-- DocPad Styles + Our Own -->
+ <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/styles/material.css">
+    <link rel="stylesheet" href="/styles/material-styles.css">
+    <link rel="stylesheet" href="/styles/material-blue-orange.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+ <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--white">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <img class="logo" src="/logo.gif"><h3></h3>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary">
+		 		<a href='/Rides.html' class="mdl-layout__tab ">Rides</a> 
+		 		<a href='/Races.html' class="mdl-layout__tab">Races</a> 
+		 		<a href='/News.html' class="mdl-layout__tab">News</a> 
+		 		<a href='/Join.html' class="mdl-layout__tab">Join</a> 
+		 		<a href='/Team.html' class="mdl-layout__tab">Members</a>
+        </div>
+      </header>
+     <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
 <% for document in @getCollection('news').toJSON()[0..2]: %>
-	<article class="frame group">
-	    <header>
-	        <time datetime="<%= document.date %>"></time>
-	        <h4><a class="posttitle" href='<%= document.url %>'><%= document.title %></a>
-	        </h4>
-	    </header>
-	    <img alt="<%= document.imagedesc %>" src="<%= document.image %>"></img>
-	    <p><%= document.description %></p>
-	    <a class="more" href="<%= document.url %>"> Read More >> </a>
-	</article>
-<% end %>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+              <img alt="<%= document.imagedesc %>" src="<%= document.image %>"></img>
+              <i class="material-icons">play_circle_filled</i>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4><%= document.title %></h4>
+                <%= document.description %>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="posttitle" href='<%= document.url %>'>Read more</a>
+              </div>
+            </div>
+          </section>
+<% end %>            
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col">Races</h4>
+<% for document in @getCollection('races').toJSON()[0..2]: %>                
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5><%= document.title %></h5>
+                  <%= document.description %> <a href="<%= document.url %>">Details</a>.
+                </div>
+<% end %>                
+            </div>
+            </div>
+          </section>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <% for document in @getCollection('rides').toJSON()[0..2]: %>
+              <div class="mdl-card__supporting-text">
+                <h4><%= document.title %></h4>
+               <%= document.description %>
+              </div>
+              <div class="mdl-card__actions">
+                <a href="<%= document.url %>" class="mdl-button">Read More</a>
+              </div>
+            <% end %>              
+            </div>
+
+          </section>
+         
+        </div>
+        <div class="mdl-layout__tab-panel" id="features">
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+<div class="mdl-cell mdl-cell--6-col" id='StravaSummary' >
+<iframe height='160' frameborder='0' allowtransparency='true' scrolling='no' src='http://www.strava.com/clubs/1033/latest-rides/b3e42ed707c8ec6ad34172e96cfa24795e303f50?show_rides=false'></iframe>
 </div>
-<h3> Rides </h3>
-<div id='rides' >
-<% for document in @getCollection('rides').toJSON()[0..2]: %>
-	<article class="frame group">
-	    <header>
-	    	 <h4><a class="posttitle" href='<%= document.url %>'><%= document.title %></a>
-	        </h4>
-	    </header>
-	     <time datetime="<%= document.time %>"></time>
-	    <p><%= document.from %></p>
-	</article>
-<% end %>
+             </div>
+          </section>
+          
+
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+<div class="mdl-cell mdl-cell--5-col" id='StravaActivity' >
+<iframe height='454' frameborder='0' allowtransparency='true' scrolling='no' src='http://www.strava.com/clubs/1033/latest-rides/b3e42ed707c8ec6ad34172e96cfa24795e303f50?show_rides=true'></iframe>
 </div>
-<h3> Races </h3>
-<div id='races' > 
-<% for document in @getCollection('races').toJSON()[0..2]: %>
-	<article class="frame group">
-	    <header>
-	    	 <h4><a class="posttitle" href='<%= document.url %>'><%= document.title %></a>
-	        </h4>
-	    </header>
-	    <time datetime="<%= document.time %>"></time>
-	    <p><%= document.Address %></p>
-	</article>
-<% end %>
+<div class="mdl-cell mdl-cell--5-col" id='coppitwitter'>
+<a class="twitter-timeline" href="https://twitter.com/SquadraCoppi" data-widget-id="550845745847599104">Tweets by @SquadraCoppi</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 
-</div>
+            </div>
+          </section>
+        </div>
+        <footer class="mdl-mega-footer">
+          <div class="mdl-mega-footer--middle-section">
+            <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer--heading">Features</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Updates</a></li>
+              </ul>
+            </div>
+            <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer--heading">Details</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="#">Spec</a></li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+            </div>
+            <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer--heading">Technology</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Patterns</a></li>
+                <li><a href="#">Usage</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contracts</a></li>
+              </ul>
+            </div>
+            <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer--heading">FAQ</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="#">Questions</a></li>
+                <li><a href="#">Answers</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mdl-mega-footer--bottom-section">
+            <div class="mdl-logo">
+              More Information
+            </div>
+            <ul class="mdl-mega-footer--link-list">
+              <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy and Terms</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+	<!-- DocPad Scripts + Our Own -->
+	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+	<script src="/scripts/material-min.js"></script>
+</body>
+</html>
+    	
+
+

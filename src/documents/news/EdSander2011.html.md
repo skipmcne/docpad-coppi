@@ -4,7 +4,7 @@ date: 'November 11, 2011'
 title: 'Nielsen leads the way with a win at Ed Sander Cyclocross'
 description: 'Kimani Nielsen made good on his promising string of podium results with a win at the Ed Sander Memorial Cyclocross on November 6.'
 image: '/img/2011_11_6_Ed_Sander_Kimani_sprint_220_147_100.jpg"'
-imagedesc: ''												
+imagedesc: ''
 
 ---	
 

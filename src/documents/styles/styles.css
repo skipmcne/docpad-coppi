@@ -1,198 +1,68 @@
-body {
-  min-width: none;
-  min-height: nonepx;
-  background-color: rgb(255, 255, 255);
-  font-size: 1em;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
-}
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.demo-ribbon {
+  width: 100%;
+  height: 40vh;
+  background-color: #3F51B5;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 
-h4.a.posttitle {
-  text-decoration: none;
-  border-left: 1em;
-  font-size: 2em;
-}
-h4.a.posttitle:hover: {
-    text-decoration: underline;
+.demo-main {
+  margin-top: -35vh;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 
-body { 
-  margin: 0; 
-}
-.logo {
-  float: left;
-  width: 269px;
-  margin-top: 10px;
-}
-.bannertop {
-  top: 0;
-  left: 15%;
-  margin-right: 15%;
-  margin-left: 15%;
-  height: 167px;
-  border-bottom: 2px solid rgb(0, 0, 0);
-}
-.columnb {
-  position: relative;
-  width: 80%;
-  margin-top: 40px;
-  margin-left: 10%;
-  margin-right: 10%;
-} 
-.columna {
-  float: left;
-  width: 50%;
-  margin-top: 40px;
-  margin-left: 10%;
-  border: 5px;    
-}
-.feeds {
-  float: right;
-  width: 310px;
-  border:5px;
-  margin-top: 40px;
-  margin-right: 10%;    
-}
-nav#site {
-  top: 180px;
-  z-index: 2;
-  margin-left: 15%;
-  margin-right: 15%;
+.demo-header .mdl-layout__header-row {
+  padding-left: 40px;
 }
 
-/* MEDIA QUERIES 
-@media screen and (min-width: 47.5em ) {
-  .columna {
-   margin-right: 19.5em;
-   }
-  .feeds { 
-    border-left : 1px solid #ccc; 
-    border-right : 1px solid #ccc; 
-    border-bottom : 1px solid #ccc; 
-    position: absolute; 
-    top: 0; 
-    right: 0;
-    width: 310px; 
-   }   
-}
-*/
-/* MEDIA QUERIES */
-
-
-@media(max-width: 1010px) {
-  .bannertop {
-    left: 10%;
-    width: 80%;
-  }
-  nav#site {
-   margin-left: 5%;
-   margin-right: 10%;
-  }
-  .image {
-    height: auto;
-  }
- .columna {
-    position: relative;
-    width: 80%;
-    margin-top: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
- .feeds { 
-    float: left;
-    clear: both;
-    width: 20%;
-    margin-top: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
-  body {
-    font-size: 1em;
-  }
+.demo-container {
+  max-width: 1600px;
+  width: calc(100% - 16px);
+  margin: 0 auto;
 }
 
-@media(max-width: 750px) {
-  .bannertop .image {
-    height: auto;
-    margin-top: 35px;
-  }
- .columna {
-    position: relative;
-    width: 80%;
-    margin: 10%;
-  }
-  .feeds {
-    float: left;
-    width: 80%;
-    margin:10%;
-  }
-  ._element {
-    position: relative;
-    z-index: 7;
-  }
+.demo-content {
+  border-radius: 2px;
+  padding: 80px 56px;
+  margin-bottom: 80px;
+}
+.article-content {
+  border-radius: 2px;
+  padding: 80px 56px;
+  margin-bottom: 80px;
 }
 
-@media(max-width: 469px) {
-  body {
-    font-size: 1em;
-  }
-  .bannertop {
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 2px;
-  }
- .image {
-    float: none;
-    height: auto;
-    margin-top: 40px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+.demo-layout.is-small-screen .demo-content {
+  padding: 40px 28px;
 }
 
-@media(max-width: 310px) {
-  body {
-    font-size: 1em;
-  }
-  .bannertop,
-nav#site {
-    left: 0;
-    right: auto;
-  }
-  .bannertop .image {
-    height: auto;
-    margin-top: 20px;
-  }
- .columna  .columnb {
-    width: 100%;
-    margin-top: 5px;
-    margin-left: 5px;
-  }
- .feeds {
-    float: left;
-    clear: both;
-    width: 300px;
-    margin-top: 5px;
-    margin-left: 5px;
-  }
+.demo-content h3 {
+  margin-top: 48px;
+}
+
+.demo-footer {
+  padding-left: 40px;
+}
+
+.demo-footer .mdl-mini-footer--link-list a {
+  font-size: 13px;
 }
